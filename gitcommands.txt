@@ -1,3 +1,5 @@
+Git Commands
+------------
 
 git init [initializing git repository] 
 
@@ -9,9 +11,9 @@ git commit -m "message" [ staged files to local repository]
 
 git remote add service https://github.com/luminartechnolabkochi/ServiceGuru.git
 
-git push remotename branch [ local repository changes remote repository]
+git push remotename branch [ local repository changes to remote repository]
 
-git pull [remote repo changes local repo]
+git pull [remote repo changes to local repo]
 
-git clone [remote repository exact copy localrepository]
+git clone [remote repository exact copy to localrepository]
 
