@@ -17,3 +17,4 @@ git pull [remote repo changes to local repo]
 
 git clone [remote repository exact copy to localrepository]
 
+git remote -v [listing all remotename]
