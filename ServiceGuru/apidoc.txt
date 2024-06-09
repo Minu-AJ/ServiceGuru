@@ -99,3 +99,37 @@ attributes:[
 
     authentication:Token
 
+
+8) api for updating work detail
+
+     url: http://127.0.0.1:8000/api/works/1/
+
+    method:PUT
+
+    body:{title,description,amount}
+
+    authentication:Token
+
+
+9) api for reterieving work detail
+
+     url: http://127.0.0.1:8000/api/works/1/
+
+    method:GET
+
+    body:Nill
+
+    authentication:Token
+
+
+9) api for deleting work 
+
+     url: http://127.0.0.1:8000/api/works/1/
+
+    method:DELETE
+
+    body:Nill
+
+    authentication:Token
+
+

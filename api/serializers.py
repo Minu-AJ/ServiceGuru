@@ -25,6 +25,8 @@ class CustomerSerializer(serializers.ModelSerializer):
     
     work_total=serializers.CharField(read_only=True)
     
+    works=WorkSerializer(many=True,read_only=True)
+    
     class Meta:
         
         model=Customer

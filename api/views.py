@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from rest_framework.viewsets import ModelViewSet
 
+from rest_framework.generics import RetrieveUpdateDestroyAPIView
+
 from rest_framework.response import Response
 
 from rest_framework import authentication,permissions
@@ -10,11 +12,12 @@ from rest_framework.decorators import action
 
 from api.serializers import CustomerSerializer,WorkSerializer
 
-from api.models import Customer
+from api.models import Customer,Work
 
 
 
 class CustomerViewSetView(ModelViewSet):
+    
     
     serializer_class=CustomerSerializer
     
@@ -50,5 +53,18 @@ class CustomerViewSetView(ModelViewSet):
         else:
             
             return Response(data=serializer.errors)
+        
+
+
+class WorkMixinView(RetrieveUpdateDestroyAPIView):
+    
+    
+    serializer_class=WorkSerializer
+    
+    queryset=Work.objects.all()
+    
+    authentication_classes=[authentication.TokenAuthentication]
+    
+    permission_classes=[permissions.IsAdminUser]
         
         
